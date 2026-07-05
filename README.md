@@ -1,25 +1,9 @@
-# spyc apt repository
+# spyc apt repository — moved
 
-Signed Debian/Ubuntu packages for
-[spyc](https://github.com/Tripstack-Corp/spyc) — a keyboard-driven,
-MCP-native terminal file commander. Served via GitHub Pages at
-<https://tripstack-corp.github.io/spyc-apt>.
+This repository is retired. spyc's apt packages are now published from the
+main repo's GitHub Pages:
 
-## Install
+**<https://tripstack-corp.github.io/spyc>**
 
-```sh
-sudo install -d -m 0755 /etc/apt/keyrings
-curl -fsSL https://tripstack-corp.github.io/spyc-apt/KEY.gpg \
-  | sudo tee /etc/apt/keyrings/spyc.asc >/dev/null
-echo "deb [signed-by=/etc/apt/keyrings/spyc.asc] https://tripstack-corp.github.io/spyc-apt ./" \
-  | sudo tee /etc/apt/sources.list.d/spyc.list >/dev/null
-sudo apt update
-sudo apt install spyc
-```
-
-`apt upgrade` picks up new releases from then on. Both `amd64` and `arm64`
-are published.
-
-Packages are built and signed automatically on each stable spyc release by
-the `apt.yml` workflow in the main repo. `KEY.gpg` is the repository signing
-key's public half (fingerprint `6039 1763 40F9 215E 2756 AFE9 D57E 3D74 C8FC 6618`).
+See [INSTALL.md](https://github.com/Tripstack-Corp/spyc/blob/main/INSTALL.md)
+for the current `apt install` instructions.
